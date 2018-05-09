@@ -267,7 +267,7 @@ var StreamingFacade = function(environment){
         $this.options = options;
 
         socket = new IsolarioWebSocket({
-            app_url : environment.defaultParams.streamingServerUrl || "ws://146.48.78.3:9999/my_subnet_reachability",
+            app_url : environment.defaultParams.streamingServerUrl || "ws://146.48.78.3:9999",
             handle_message : function(data){$this._handleMessage.call($this, data)},
             post_send_app : function(data){$this._postConnection.call($this, data)},
             token: environment.defaultParams.authenticationToken

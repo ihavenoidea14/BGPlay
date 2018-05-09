@@ -7,7 +7,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "aboutBgplay.html.js"
+        "modules/html/js_nocors/aboutBgplay.html.js"
 
     ],  function(){
 

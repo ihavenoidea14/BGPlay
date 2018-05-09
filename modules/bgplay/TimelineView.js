@@ -14,7 +14,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "timeline.html.js"
+        "modules/html/js_nocors/timeline.html.js"
 
     ],  function(){
 

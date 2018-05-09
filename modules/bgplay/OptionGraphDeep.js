@@ -15,7 +15,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "optionGraphDeep.html.js"
+        "modules/html/js_nocors/optionGraphDeep.html.js"
 
     ],  function(){
 

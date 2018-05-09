@@ -15,7 +15,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "optionRestoreGraph.html.js"
+        "modules/html/js_nocors/optionRestoreGraph.html.js"
 
     ],  function(){
 

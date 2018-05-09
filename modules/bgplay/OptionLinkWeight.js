@@ -15,7 +15,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "optionLinkWeight.html.js"
+        "modules/html/js_nocors/optionLinkWeight.html.js"
 
     ],  function(){
 

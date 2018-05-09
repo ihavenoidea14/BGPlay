@@ -14,7 +14,7 @@
  */
 define(
     [
-        BGPLAY_TEMPLATES_NOCORS_URL + "infoPanel.html.js"
+        "modules/html/js_nocors/infoPanel.html.js"
     ],  function(){
 
         var InfoPanelView = Backbone.View.extend({

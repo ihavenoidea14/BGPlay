@@ -1,44 +1,40 @@
-/*
- * Massimo Candela for isolario.it (CNR)
- */
-
 require.config({
     paths: {
-        "jquery": BGPLAY_LIB_URL + "jquery",
-        "jquery-ui": BGPLAY_LIB_URL + "jquery-ui.min",
+        "jquery": "lib/jquery",
+        "jquery-ui": "lib/jquery-ui.min",
 
-        "jquery-socket": BGPLAY_CONNECTORS_URL + "isolario/jquery.gracefulWebSocket",
-        "isolario-facade": BGPLAY_CONNECTORS_URL + "isolario/IsolarioFacade",
-        "isolario-socket": BGPLAY_CONNECTORS_URL + "isolario/IsolarioWebSocket",
-        "isolario-errors": BGPLAY_CONNECTORS_URL + "isolario/errors",
-        "streaming-adapter": BGPLAY_CONNECTORS_URL + "StreamingAdapter",
+        "jquery-socket": "connectors/isolario/jquery.gracefulWebSocket",
+        "isolario-facade": "connectors/isolario/IsolarioFacade",
+        "isolario-socket": "connectors/isolario/IsolarioWebSocket",
+        "isolario-errors": "connectors/isolario/errors",
+        "streaming-adapter": "connectors/StreamingAdapter",
 
-        "underscore": BGPLAY_LIB_URL + "underscore",
-        "backbone": BGPLAY_LIB_URL + "backbone",
-        "tinyscrollbar": BGPLAY_LIB_URL + "jquery.tinyscrollbar.min",
-        "mousewheel": BGPLAY_LIB_URL + "jquery.mousewheel.min",
-        "timepicker": BGPLAY_LIB_URL + "jquery-ui-timepicker-addon",
-        "mustaches": BGPLAY_LIB_URL + "mustaches",
-        "raphael": BGPLAY_LIB_URL + "raphael",
-        "raphael-pan": BGPLAY_LIB_URL + "raphael-pan",
-        "model": BGPLAY_WIDGET_URL + "bgplayjs-common-model",
+        "underscore": "lib/underscore",
+        "backbone": "lib/backbone",
+        "tinyscrollbar": "lib/jquery.tinyscrollbar.min",
+        "mousewheel": "lib/jquery.mousewheel.min",
+        "timepicker": "lib/jquery-ui-timepicker-addon",
+        "mustaches": "lib/mustaches",
+        "raphael": "lib/raphael",
+        "raphael-pan": "lib/raphael-pan",
+        "model": "widget/bgplayjs-common-model",
 
-        "config": BGPLAY_WIDGET_URL + "bgplay-isolario/bgplay-config",
-        "modules": BGPLAY_WIDGET_URL + "bgplay-isolario/bgplay-modules",
+        "config": "widget/bgplay-isolario/bgplay-config",
+        "modules": "widget/bgplay-isolario/bgplay-modules",
 
 
-        "TreeMap": BGPLAY_LIB_URL + "TreeMap",
-        "dateFormat": BGPLAY_LIB_URL + "dateFormat",
-        //"xdomainajax": BGPLAY_LIB_URL + "jquery.xdomainajax",
+        "TreeMap": "lib/TreeMap",
+        "dateFormat": "lib/dateFormat",
+        //"xdomainajax": "lib/jquery.xdomainajax",
 
-        "compatibilityTricks": BGPLAY_UTILS_URL + "compatibilityTricks",
-        "validator": BGPLAY_UTILS_URL + "validator",
-        "graphUtils": BGPLAY_UTILS_URL + "graph",
-        "general": BGPLAY_UTILS_URL + "general",
-        "cssAlert": BGPLAY_UTILS_URL + "cssAlert",
-        "wbrGraph": BGPLAY_LIB_URL + "wbrGraph2",
-        "main": BGPLAY_PROJECT_URL + "main",
-        "MainView": BGPLAY_MODULES_URL + "MainView"
+        "compatibilityTricks": "utils/compatibilityTricks",
+        "validator": "utils/validator",
+        "graphUtils": "utils/graph",
+        "general": "utils/general",
+        "cssAlert": "utils/cssAlert",
+        "wbrGraph": "lib/wbrGraph2",
+        "main": "main",
+        "MainView": "modules/MainView"
     },
 
     shim: {
@@ -150,13 +146,13 @@ define([
     "MainView",
     "main",
     "model",
-    BGPLAY_CONNECTORS_URL + "JsonWrapGeneric.js",
+    "connectors/JsonWrapGeneric.js",
     "raphael-pan",
     "tinyscrollbar",
     "mousewheel",
     "timepicker",
     "TreeMap",
-    BGPLAY_LIB_URL + "Intersection.js",
+    "lib/Intersection.js",
     "wbrGraph",
     "validator",
     "general",
@@ -170,13 +166,12 @@ define([
     debugMode = getUrlParam("debug")=="true";// false to prevent console logs
 
     window.Mustache = Mustache;
-    loadCss(BGPLAY_STYLESHEETS_URL + 'jquery-ui-191.css');
-    loadCss(BGPLAY_STYLESHEETS_URL + 'jquery.ui.datepicker.css');
-    loadCss(BGPLAY_STYLESHEETS_URL + 'bgplay.css');
+    loadCss('modules/css/jquery-ui-191.css');
+    loadCss('modules/css/jquery.ui.datepicker.css');
+    loadCss('modules/css/bgplay.css');
 
     var BgplayStart = function() {
         instanceName = 'BGPlayRT';
-
         instance = getBGPlayInstance(instanceName);
 
         element = $('#' + instance.domId);
@@ -205,6 +200,7 @@ define([
             //main.environment.dom.append(misc.infoMessage(type,msg));
         };
 
+        console.log(JSON.stringify(initialParams, null, 2));
 
         //Initialization of the BGPlay environment
         main.init({
@@ -213,9 +209,9 @@ define([
             config: config,
             modules: modules,
             mainView: MainView,
-            fileRoot: BGPLAY_PROJECT_URL,
-            imageRoot: BGPLAY_IMAGES_URL,
-            templateRoot: BGPLAY_TEMPLATES_URL,
+            fileRoot: '/',
+            imageRoot: 'modules/html/img/',
+            templateRoot: 'modules/html/',
             updateWithStreaming: initialParams.updateWithStreaming,
             streamingOn: initialParams.streamingOn,
             streamInitialDump: initialParams.streamInitialDump,
@@ -224,7 +220,7 @@ define([
 
         main.setDefaultParams(initialParams);
 
-        main.retrieveData();
+        console.log(main.retrieveData())
 
         this.destroy = main.destroy;
     };

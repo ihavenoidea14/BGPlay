@@ -15,7 +15,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "options.html.js"
+        "modules/html/js_nocors/options.html.js"
 
     ],  function(){
 

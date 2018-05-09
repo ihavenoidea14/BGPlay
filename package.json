@@ -1,0 +1,25 @@
+{
+  "name": "BGPlay",
+  "version": "1.0.0",
+  "description": "BGPlay.js (+ real-time version!) ========================== ***News: This repo contains the classic BGPlay + the real-time version. It has received many performance improvements affecting both the versions.***",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxCam/BGPlay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxCam/BGPlay/issues"
+  },
+  "homepage": "https://github.com/MaxCam/BGPlay#readme"
+}

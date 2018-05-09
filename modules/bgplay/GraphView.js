@@ -15,11 +15,11 @@
 define(
     [
         //Sub-modules
-        BGPLAY_MODULES_URL + "bgplay/NodeView.js",
-        BGPLAY_MODULES_URL + "bgplay/PathView.js",
+        "modules/bgplay/NodeView.js",
+        "modules/bgplay/PathView.js",
 
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "graph.html.js"
+        "modules/html/js_nocors/graph.html.js"
 
     ],  function(NodeView, PathView){
 

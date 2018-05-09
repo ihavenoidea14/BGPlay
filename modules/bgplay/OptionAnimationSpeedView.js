@@ -15,7 +15,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "optionAnimationSpeed.html.js"
+        "modules/html/js_nocors/optionAnimationSpeed.html.js"
 
     ],  function(){
 

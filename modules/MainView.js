@@ -16,7 +16,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "main.html.js"
+        "modules/html/js_nocors/main.html.js"
 
     ],  function(){
 

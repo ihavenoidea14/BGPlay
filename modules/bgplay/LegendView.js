@@ -16,7 +16,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "legend.html.js"
+        "modules/html/js_nocors/legend.html.js"
 
     ],  function(){
 

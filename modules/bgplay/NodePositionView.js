@@ -18,7 +18,7 @@
 define(
     [
         //Template
-        BGPLAY_TEMPLATES_NOCORS_URL + "nodePosition.html.js"
+        "modules/html/js_nocors/nodePosition.html.js"
 
     ],  function(){
 

@@ -9,6 +9,7 @@
  */
 
 var BGPlay = function(domElement){
+    console.log('made it here');
     this.dom = domElement;
 
     this.alert = function(msg, type){

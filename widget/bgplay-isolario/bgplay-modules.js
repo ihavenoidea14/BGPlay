@@ -1,24 +1,19 @@
-/*
- * Massimo Candela for isolario.it (CNR)
- */
-
-
 define(
     [
-            BGPLAY_MODULES_URL + "bgplay/BgpDataChecksView.js",
-            BGPLAY_MODULES_URL + "bgplay/ControllerQuerySimpleView.js",
-            BGPLAY_MODULES_URL + "bgplay/InfoPanelView.js",
-            BGPLAY_MODULES_URL + "bgplay/GraphView.js",
-            BGPLAY_MODULES_URL + "bgplay/TimelineView.js",
-            BGPLAY_MODULES_URL + "bgplay/ControllerView.js",
-            BGPLAY_MODULES_URL + "bgplay/LegendView.js",
-            BGPLAY_MODULES_URL + "bgplay/NodePositionView.js",
-            BGPLAY_MODULES_URL + "bgplay/OptionPopupView.js",
-            BGPLAY_MODULES_URL + "bgplay/OptionAnimationSpeedView.js",
-            BGPLAY_MODULES_URL + "bgplay/OptionRestoreGraph.js",
-            BGPLAY_MODULES_URL + "bgplay/OptionGraphDeep.js",
-            BGPLAY_MODULES_URL + "bgplay/OptionLinkWeight.js",
-            BGPLAY_MODULES_URL + "bgplay/AboutBgplayView.js"
+        "modules/bgplay/BgpDataChecksView.js",
+        "modules/bgplay/ControllerQuerySimpleView.js",
+        "modules/bgplay/InfoPanelView.js",
+        "modules/bgplay/GraphView.js",
+        "modules/bgplay/TimelineView.js",
+        "modules/bgplay/ControllerView.js",
+        "modules/bgplay/LegendView.js",
+        "modules/bgplay/NodePositionView.js",
+        "modules/bgplay/OptionPopupView.js",
+        "modules/bgplay/OptionAnimationSpeedView.js",
+        "modules/bgplay/OptionRestoreGraph.js",
+        "modules/bgplay/OptionGraphDeep.js",
+        "modules/bgplay/OptionLinkWeight.js",
+        "modules/bgplay/AboutBgplayView.js"
 
     ],  function(
 
